@@ -1,0 +1,427 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+int Add(int x, int y);//函数声明
+
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int sum = 0;
+	sum = Add(a, b);//函数调用
+	printf("sum=%d\n", sum);
+	return 0;
+}
+int Add(int x, int y)//函数的定义
+{
+	int z = x + y;
+	return z;
+}
+//int binary_search(int arr[], int k, int sz)
+//{
+//	
+//	int left = 0;
+//	int right = sz-1;
+//	
+//	while (left <= right)
+//	{
+//		int mid = (left + right) / 2;   //二分查找法
+//		if (arr[mid] <k )
+//		{
+//			left = mid + 1;
+//		}
+//		else if (arr[mid] > k)
+//		{
+//			right = mid - 1;
+//		}
+//		else 
+//		{
+//			return mid;
+//		}
+//	}
+//
+//	return -1;
+//}
+//int main()
+//{
+//	int arr[] = {1,2,3,4,5,6,7,8,9,10};
+//	int k = 7;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int ret = binary_search(arr, k, sz);
+//	if (ret == -1)
+//	{
+//		printf("没找到指定下标");
+//	}
+//	else 
+//	{
+//		printf("找到了下标是：%d", ret);
+//	}
+//		
+//		return 0;
+//}
+ ////int main()
+//{
+//	int len = 0;
+//	printf("%d\n",strlen("abc"));
+//	return 0;
+//}
+// 
+// 
+//void Add(int* p)
+//{
+//	(*p)++;
+//
+//}
+//int main()
+//{
+//	int num = 0;          //sum调用后自增1
+//	Add(&num);
+//	printf("num=%d\n",num);
+//	Add(&num);
+//	printf("num=%d\n", num);
+//	Add(&num);
+//	printf("num=%d\n", num);
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //本质上arr是一个指针
+//int binary_search(int arr[], int k, int sz)
+//{    //int sz = sizeof(arr) / sizeof(arr[0]);//这种传参是不对的
+//	int left = 0;
+//	int right = sz-1;//右下标->数组元素减一
+//	
+//	while (left <= right)
+//	{
+//		int mid = (left + right) / 2;//中间元素下标
+//		if (arr[mid] < k)	                         //算法的实现
+//		{
+//			left = mid + 1;
+//
+//		}
+//		else if (arr[mid] > k)
+//		{
+//			right = mid - 1;
+//		}
+//		else
+//		{
+//			return mid;
+//		}
+//	}
+//	return -1;
+//}
+//	int main()
+//{         //二分查找
+//	//在有序数组中查找具体的某个数
+//	int arr[] = {1,2,3,4,5,6,7,8,9,10};
+//	int k = 7;
+//	//传递过来的是arr首元素的地址
+//	
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int ret = binary_search(arr, k, sz);//binary_search二分查找代码
+//	if (ret == -1)
+//	{
+//		printf("找不到指定的数字");
+//	}
+//	else
+//	{
+//		printf("找到了下标是：%d\n",ret);
+//	}
+//	return 0;
+//}
+//int is_leap_year(int y)
+//{
+//	if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))
+//	{
+//		return 1;
+//	}
+//	else
+//		return 0;
+//}
+//int main()
+//{
+//	int year = 0;
+//	for (year = 1000; year <= 2000; year++)
+//	{      //判断yeaar是否是闰年
+//		if (1 == is_leap_year(year))
+//		{
+//			printf("%d\n",year);
+//		}
+//	}
+//
+//	return 0;
+//}
+//int is_prime(int n)
+//{    //2->n-1
+//	int j = 0;
+//	for (j = 2; j <=sqrt(n); j++)
+//	{
+//		if (n % j == 0)
+//		return 0;
+//	}
+//	return 1;
+//}
+//int main()
+//{
+//	int i = 0;
+//	for (i = 100; i <= 200; i++)
+//	{
+//		if (is_prime(i) == 1)
+//			printf("%d\n",i);
+//	}
+//
+//	return 0;
+//}
+//int Add(int x,int y)
+//{
+//	int z = 0;
+//
+//	z = x + y;
+//		return z;
+//}
+//int get_max(int x, int y)
+//{
+//	if (x > y)
+//	return x;
+//	else (x <= y);
+//    return y;
+//}
+//Swap2(int* pa, int* pb)
+//{
+//	int tmp = 0;
+//	tmp = *pa;
+//	*pa= *pb;
+//	*pb = tmp;
+//
+//
+//}
+//Swap(int* pa, int* pb)    //实际参数--常量 变量 表达式 函数调用时必须要有确定的值    
+//{                         //形式参数--形式上的参数，只有在被调用时才会实例，
+//	int tmp = 0;          //完成后自动销毁，所以形式参数只在函数中有效
+//	tmp = *pa;            //当实参传给形参的时候，形参其实是实参的一份临时拷贝
+//    * pa = *pb;           //对形参的修改是不会改变实参的
+//	*pb = tmp;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//   //调用Swap函数    
+//	Swap(&a, &b);            //传值调用  对形参的修改是不会改变实参的
+//	                       //传址调用 把函数和函数外边的变量建立起来联系
+//	printf("a=%d b=%d\n",a,b);//也就是说可以在函数内部直接操作函数外部的变量
+//	return 0;
+//}
+//{
+//	int a = 10;
+//	int b = 20;
+//	
+//	//int tmp = 0;//tmp临时变量
+//	printf("a=%d b=%d\n", a, b);
+//	//Swap(a, b);
+//	Swap2(&a, &b);
+//	/*tmp = a;
+//	a = b;
+//	b = tmp;*/
+//		printf("a=%d b=%d\n",a,b);
+//		
+//	return 0;
+//
+//}
+
+//{
+//	int a = 10;
+//	int b = 20;
+//	//函数的使用
+//	int max=get_max(a, b);
+//	printf("max=%d\n",max);
+//	return 0;
+//
+//}
+//{
+//	char arr[] = "hello world";
+//	memset(arr, '*', 5);
+//	printf("%s\n",arr);
+//	return 0;
+//}
+//{
+//	char arr1[] = "bit";
+//	char arr2[20] = "#######";
+//	strcpy(arr2, arr1);
+//		printf("%s\n",arr2);
+//
+//
+//	return 0;
+//}
+//{
+//	int a = 10;
+//	int b = 20;
+//	int sum=Add(a, b);
+//	printf("%d\n",sum);
+//	return 0;
+//}
+//{
+//	int i = 0;
+//	for (i = 0; i <= 9; i++)
+//		//确定打印9行
+//	{
+//		int j = 1;
+//		for (j = 1; j <= i; j++)
+//		{
+//			printf("%d * %d = %2d ",i,j,i*j);
+//		}
+//		printf("\n");
+//	}
+//		return 0;
+//	//9*9乘法口诀表
+//}
+                         
+//{
+//	int i = 0;
+//	double sum = 0.0; 
+//	int flag = 1;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		sum += flag*1.0/i;
+//		flag = -flag;
+//	}
+//	printf("%lf\n",sum);
+//	return 0;
+//}
+//{
+//	int i = 0;
+//	int count = 0;
+//	for (i = 0; i <= 100; i++)
+//	{
+//		if (i % 10 == 9)//判断
+//		count++;
+//
+//		if (i / 10 == 9)
+//		count++;
+//	}
+//	printf("count=%d",count);
+//	return 0;
+//
+//}
+//{
+//	int i = 0;
+//	int count = 0;
+//	for (i = 101; i <= 200; i+=2)
+//	{
+//		//判断i是否为素数
+//	    //素数判断的规则
+//		//1.试除法 
+//		//a或者b至少有一个数字小于等于开平方i     16=2*8=4*4
+//		//sqrt--开平方的数学库函数
+//		int a = 0;
+//		for (a = 2; a <=sqrt(i); a++)
+//		{
+//			if (i % a == 0)
+//			{
+//				break;
+//			}
+//		}
+//		if (a >sqrt(i))
+//		{
+//			count++;
+//			printf("%d\n",i);
+//		}
+//	}
+//	printf("\ncount=%d",count);
+//	return 0;
+//}
+//{//判断year是否为闰年
+	//1.能被4整除并且不能被100整除的是闰年
+	//2.能被400整除的是闰年 
+//	int year = 1000;
+//	int count = 0;
+//	for (year = 1000; year <=2000; year++)
+//	{ 
+//		if (year % 4 == 0 && year % 100 != 0)
+//		{
+//			printf("%d\n", year);//能被4整除，且不能被100整除的是闰年
+//			count++;
+//		}
+//		else if (year % 400 == 0)
+//		{
+//			printf("%d\n",year);
+//			count++;
+//		}
+//	}
+//	printf("cout=%d\n",count);
+//	return 0;
+//
+//}
+//{
+//	int m = 24;
+//	int n = 18;
+//	int r = 0;
+//	scanf("%d %d",&m,&n);
+//	while (r=m % n)//辗转相除法
+//	{
+//		//r = m % n;
+//		m = n;
+//		n = r;
+//	}
+//	printf("%d\n",n);
+//	return 0;
+//}
+//{
+//	int i = 0;
+//	for (i = 0; i <= 100; i++)
+//	{
+//		if (i %3 == 0)
+//			printf("%d\n",i);
+//	}
+//	return 0;
+//
+//}
+//{
+	//int a = 0;
+	//int b = 0;
+	//int c = 0;
+	//scanf("%d %d %d",&a,&b,&c);
+	////算法实现
+	////a中放最大值
+	////b次之
+	////c中放最小值
+	////tmp临时变量--->int tmp
+	//if (a<b) 
+	//{
+	//	int tmp = a;
+	//	a = b;
+	//	b = tmp;
+	//}
+	//if (a < c)
+	//{
+	//	int tmp = a;
+	//	a = c;
+	//	c = tmp;
+	//}
+	//if (b< c)
+	//{
+	//	int tmp = b;
+	//	b = c;
+	//	c = tmp;
+	//}
+	//printf("%d %d %d\n",a,b,c);
+//
+//	return 0;
+//
+//}
