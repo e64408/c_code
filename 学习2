@@ -1,0 +1,395 @@
+//#include<stdio.h>
+//enum Color
+//{
+	//RED,
+    //YELLOW,
+    //BLUE
+//};
+//int main()
+//{   //数据在计算机上存储的二进制
+	//ASCII码
+	//char arr1[] = "abc";
+	//////char arr2[] = { 'a','b','c','\0' };//"\0"字符串的结束标志
+	//////printf("%s\n",arr1);
+	//////printf("%s\n", arr2);
+	//////printf("%d\n", strlen(arr1));//strlen-string length-计算字符串长度的
+	//////printf("%d\n", strlen(arr2));
+	//////printf("c:\\test\\32\\test.c");
+	//////enum Color color = BLUE;
+	//////color = YELLOW;
+	//////printf("%d\n", FEMALE);
+
+	//int num1 = 0;
+	//int num2 = 0;
+	//int sum = 0;
+	//scanf_s("%d%d", &num1, &num2);
+	//sum = num1 + num2;
+	//printf("sum=%d\n", sum);
+	//scanf_s("%d%d", &num1,&num2);//取地址符号&
+  // sum = num1 + num2;
+   //printf("sum=%d\n", sum);
+	//const-常属性
+	//const修饰的常变量
+	 //#define定义的标识符常量
+	//枚举关键-enum
+	//enum Sex         MALE,FEMALE,SECRET
+
+	//return 0;             
+	                      
+//}
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//#include<string.h>
+//
+//int main()
+//{
+//	printf("%d\n", strlen("c:\test\32\test.c"));
+//
+//	return 0;
+//
+//}
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<string.h>
+//Add(int x, int y)
+//{
+//	int z=x + y;
+//	return z;
+//}
+//int Max(int x, int y)
+//{
+//	if (x > y)
+//		return x;
+//	else
+//		return y;
+//}
+//
+//int Add(int x,int y);
+//{
+//	int z = 0;
+//	z = x + y;
+//	return z;
+//}
+//static 修饰局部变量
+// 也是改变了函数的作用域-不准确
+// static修饰函数改变了函数的链接属性
+// 外部链接属性---->局部链接属性
+//局部变量的生命周期变长
+// 改变了变量的作用域-让静态的全局变量只能在自己所在的源文件内部使用
+// 出了源文件就无法使用
+//void test()
+//{
+//	static int a = 1;
+//	a++;
+//	printf("a=%d\n",a);
+//}
+//int g_val = 2022;//全局变量
+//extern int Add(int , int );
+//define---定义的标识符常量
+//#define MAX 100
+//define可以定义宏--带参数
+
+
+
+//函数的实现
+//int Max(int x, int y)
+//{
+//	if (x > y)
+//		return x;
+//	else
+//		return y;
+//}
+////宏的方式
+//#define MAX(X,Y)(X>Y?X:Y)
+int main()
+{
+	int ch = 0;//ctrl+z可以终止
+	while ((ch = getchar()) != EOF)//EOF--end of file-> -1
+		putchar(ch);
+
+//	int i = 1;
+//	while (i <= 10)
+//	{
+//		if (i == 5)
+//			continue;// 终止本次循环（关键！）遇到continue跳过本次循环后面的代码，
+//		printf("%d\n", i);//直接跳转到while语句的判断部分，进行下一次循环的入口判断
+//		i++;
+//		/*if (i == 6)
+//			break;*///中断代码
+//}
+
+
+	return 0;
+}
+	/*int n = 1;
+	int m = 2;
+	switch (n)
+	{
+	case 1:m++;
+	case 2:n++;
+	case 3:
+		switch (n)
+		{
+		case 1:n++;
+		case 2:m++;
+			n++;
+			break;
+		}
+	case 4:m++;
+		break;
+	default:
+		break;
+	}
+	printf("m=%d,n=%d\n",m,n);
+	return 0;*/
+//}
+	//int day = 0;//switch需要整型
+	//int n = 1;
+	//scanf("%d",&day);
+	//switch (day)
+	//{
+	//case 1:              //case整型常量表达式	
+	//	if (n == 1)
+	//		printf("hehe\n");
+	//case 2:
+	//case 3:
+	//case 4:
+	//case 5:
+	//   
+	//	printf("工作日\n");//case后面不一定要加break
+	//	break;
+	//case 6:
+	//case 7:
+	//	printf("休息日\n");
+	//	break;
+	//default://如果特定情况不符合，走默认步骤//可有可无    case和default没有顺序区别，
+	//	printf("输入错误");                               //建议case在前default在后 
+	//	break;
+	//{
+	//case 1://case整型常量表达式
+	//	printf("工作日\n"); break;
+	//case 2:
+	//	printf("工作日\n"); break;
+	//case 3:
+	//	printf("工作日\n"); break;
+	//case 4:
+	//	printf("工作日\n"); break;
+	//case 5:
+	//	printf("工作日\n"); break;
+	//case 6:
+	//	printf("休息日\n"); break;
+	//case 7:
+	//	printf("休息日\n"); break;
+	//}
+	/*if (1 == day)
+		printf("星期一\n");
+	else if (2 == day)
+		printf("星期二\n");
+	else if (3 == day)
+		printf("星期三\n");
+	else if (4 == day)
+		printf("星期四\n");*/
+
+		/*int a;
+		printf("请输入一个整数：");
+		scanf("%d", &a);
+		if (a % 2 == 0)
+			printf("%d为偶数！", a);
+		else
+			printf("%d为奇数！");*/
+		/*int a;
+		printf("输入数字：");
+		scanf("%d",&a);
+		if (a % 2 == 0)
+			printf("偶数");
+		else
+			printf("奇数");*/
+	/*int i = 1;
+	while (i <= 100)
+	{
+		if (i % 2 == 1)
+			printf("%d\n",i);
+		i++;
+	}*/
+	/*int age = 110;
+	if (age < 18)
+		printf("未成年\n");
+	else if (age >= 18 && age < 28)
+		printf("成年人\n");
+	else if (age >= 28 && age < 50)
+		printf("壮年\n");
+	else if (age >= 50 && age < 90)
+		printf("老年\n");
+	else
+		printf("老老年\n");
+	*/
+	/*char ch = 'w';
+	char* A = 'a';
+	printf("%c\n",A);
+	printf("%d\n",sizeof(A));*/
+	//指针大小在32位平台是4个字节，在64位平台是8个字节
+	//int a = 10;//4个字节
+	//int* p = &a;//&a取地址
+	//printf("%p\n", &a);
+	//printf("%p\n", p);
+	//*p=20;//*-解引用操作符
+	//printf("a=%d\n",a);
+	//printf("%p\n",&a);//%p打印地址
+	//int a = MAX;
+	//int a = 10;
+	//int b = 20;
+	//int max = Max(a, b);
+	//printf("max=%d\n",max);
+	////宏的方式
+	//max = MAX(a,b);
+	//printf("max=%d\n",max);
+
+
+
+
+	
+
+	/*int a = 10;
+	int b = 20;
+	int sum = Add(a, b);
+		printf("sum=%d\n",sum);
+		return 0;*/
+	//extern-声明外部符号的
+	/*
+	extern int g_val;
+	printf("g_val= %d\n",g_val);*/
+	/*int i = 0;
+	while (i < 5)
+	{
+		test();
+		i++;
+	}
+	*/
+	//计算机存储数据
+	     /* 寄存器
+		  高速缓存
+		  内存
+		  硬盘*/ 
+	//signed int;有符号的
+	//unsigned int num=1;无符号的
+	//struct-结构体关键字
+	//union-联合体/共用体
+	//typedef---类型定义-类型重定义
+	
+
+	/*int a = 10;*///局部变量-自动变量
+	//	int arr[10] = {0};
+	//	arr[4];/下标引用操作符[]
+	//int a = 10;
+	//int b = 20;
+	//int sum = Add(a, b);//()---函数调用操作符
+	//printf("%d\n",z);
+//只要是整数，内存中存储的都是二进制补码
+// 正数--原码，反码，补码相同
+// 负数：
+// 原码   ---->           反码          ----->补码
+// 直接按照正负        原码的符号位不变       反码+1
+// 写出的二进制序列     其他位按位取反得到
+// -2
+// 10000000000000000000000000000010原码
+// 11111111111111111111111111111101反码
+// 11111111111111111111111111111110补码
+//[1][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]符号位1是负数
+//[0][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]符号位0是正数
+/*int input = 0;
+	printf("加入比特\n");
+	printf("你要好好学习吗？（1/0）>:");
+	scanf_s("%d", &input);
+	if (input == 1)
+		printf("好offer\n");
+	else
+		printf("卖红薯\n");
+	return 0;*/
+	/*int line = 0;
+	printf("加入比特\n");
+	while (line < 20000)
+	{
+		printf("敲一行代码%d\n",line);
+		line++;
+
+	}
+	printf("好offer\n");*/
+
+	//int num1 = 10;
+	//int num2 = 20;
+	//int sum = 0;
+	//int a = 100;
+	//int b = 200;
+	//sum = Add(num1, num2);
+	////sum = Add(a, b);
+	//printf("sum = %d\n",sum);
+	//int a = 1;
+	//int b = 2;
+	//int c = 3;
+	/*int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int i = 0;
+	while (i < 10)
+	{
+		printf("%d", arr[i]);
+		i++;
+	}*/
+	/*printf("%d\n",arr[4]);*/
+	//&按位与
+	//|按位或
+	//^按位异或
+	/*int arr[10] = { 0 };
+	int sz = 0;
+	printf("%d\n", sizeof (arr));
+	sz = sizeof(arr) / sizeof(arr[0]);
+	printf("sz=%d\n", sz);*/
+	
+	/*if (num1 > num2)
+		printf("较大值是:%d\n", num1);
+	else
+		printf("较大值是:%d\n", num2);*/
+	/*Max(num1, num2);*/
+//	int num1 = 10;
+//	int num2 = 20;
+//	int max = 0;
+//	max = Max(num1, num2);
+//	printf("max= %d\n", max);
+	/*int a = 10;
+	int arr[] = { 1,2,3,4,5,6 };
+	printf("%d\n", sizeof(arr));
+	printf("%d\n", sizeof(arr) / sizeof(arr[0]));*/
+	//int a = 0;//占用4个字节，32个bit位
+	//int b = ~ a;//b是有符号的整型
+	//~是取反
+	//原码、反码、补码
+	//负数在内存中存储的时候，存储的是二进制的补码
+	//11111111111111111111111111111111补码       第一位符号不变
+	//11111111111111111111111111111110反码
+	//10000000000000000000000000000001原码→第一位-1    -1
+	//printf("%d\n",b);//使用的，打印的是这个数的原码
+	//int a = 10;
+	//int b = a++;//后置++，先使用再++
+	//int b1 = ++a;//前置++，先++再使用
+	//printf("a=%d b=%d\n", a, b);
+	//int a = 10;
+	//int b = a--;
+	//int b = --a;
+	////printf("a=%d b=%d", a, b);//后置--，先使用再--/9 10
+	//printf("a=%d b=%d", a, b);//前置--，先--再使用/9 9
+	/*int a =(int) 3.14;
+	printf("%d\n",a);*/
+	//==等于      ！=不相等     >=大于等于
+	//&&逻辑与       全1-真      有0-0
+	//||逻辑或       有1-真      全0-0
+	/*int a = 0;
+	int b = 0;*/
+	//int c = a && b;
+	/*int c = a || b;
+	printf("%d\n", c);*/
+	/*int a = 10;
+	int b = 20;
+	int max = 0;
+	if (a > b)
+		max = a;
+	else
+		max = b;
+	*/
