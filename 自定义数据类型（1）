@@ -1,0 +1,60 @@
+数据结构
+数据在内存中存储的结构
+ 
+ 链表
+ 12345
+struct Node结构体自引用
+ {
+ int data;//4
+ struct Node* next;//4/8
+ }
+ 存放数据的叫数据域 存放指针的叫指针域
+
+ 
+ 结构体变量的定义和初始化
+
+struct T
+{
+	double weight;
+	short age;
+
+};
+struct S
+{
+	char c;
+	struct T st;
+	int a;
+	double d;
+	char arr[20];
+
+};
+int main()
+{
+	//struct S s = {'c',100,3.14,"hello,bit"};
+	struct S s = { 'c',{55.6,30},100,3.14,"hello,bit" };
+	printf("%c %d %lf %s\n",s.c,s.a,s.d,s.arr);
+	printf("%lf\n", s.st.weight);
+	return 0;
+}
+结构体内容对齐
+struct S1
+{
+	char c1;
+	int a;
+	char c2;
+};
+struct S2
+{
+	char c1;
+	char c2;
+	int a;
+};
+
+int main()
+{
+	struct S1 s1 = {0};
+	struct S2 s2 = { 0 };
+	printf("%d\n",sizeof(s1));
+	printf("%d\n", sizeof(s2));
+	return 0;
+}
