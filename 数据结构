@@ -1,0 +1,26 @@
+顺序表的定义
+#define MAX_SIZE 100                  //数据最大长度
+typedef int Elemtype;                 //数据类型的别名
+typedef struct sqlist                 //定义线性表结构体
+{
+Elemtype data[MAX_SIZE];              //线性表存储元素的数组
+int length;                           //记录线性表的长度
+}Sqlist;                              //线性表的名称
+
+
+
+顺序表的插入
+for(int j=L—>length;j>=i;j--)
+   L->data[j]=L->data[j-1];
+   L->data[i-1]=e;
+   L->length++;
+   
+   集合结构
+   线性结构
+   树形结构
+   网状结构
+   
+   顺序结构  √常考
+   链式结构  √常考
+   索引结构
+   散列结构
